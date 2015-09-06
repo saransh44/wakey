@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  Hours.swift
 //  WakeyInsomnia
 //
 //  Created by Anand Tyagi on 9/5/15.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Hours: UIViewController {
     let gradientLayer = CAGradientLayer()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,16 +36,11 @@ class ViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
-
 
 }
 

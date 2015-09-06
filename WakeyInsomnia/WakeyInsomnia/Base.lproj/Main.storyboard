@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="62Q-WM-VSj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WakeyInsomnia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeScreen" customModule="WakeyInsomnia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,7 +44,7 @@ Wakey</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="318"/>
+            <point key="canvasLocation" x="396" y="318"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oCC-g3-FIf">
@@ -64,10 +64,10 @@ Wakey</string>
             </objects>
             <point key="canvasLocation" x="1106" y="318"/>
         </scene>
-        <!--View Controller-->
+        <!--Hours-->
         <scene sceneID="mqJ-Lr-MiT">
             <objects>
-                <viewController id="62Q-WM-VSj" sceneMemberID="viewController">
+                <viewController id="62Q-WM-VSj" customClass="Hours" customModule="WakeyInsomnia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vGW-m7-Gvi"/>
                         <viewControllerLayoutGuide type="bottom" id="1tc-6v-H0b"/>
@@ -75,7 +75,24 @@ Wakey</string>
                     <view key="view" contentMode="scaleToFill" id="dRS-8q-oU1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How many hours are   you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
+                                <rect key="frame" x="138" y="53" width="324" height="24"/>
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-QL-bqo">
+                                <rect key="frame" x="142" y="303" width="320" height="162"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="o9M-QL-bqo" secondAttribute="bottom" constant="135" id="hDe-oa-YUN"/>
+                            <constraint firstAttribute="centerX" secondItem="Hya-8F-a5F" secondAttribute="centerX" id="kcm-C9-ZJX"/>
+                            <constraint firstAttribute="centerX" secondItem="o9M-QL-bqo" secondAttribute="centerX" constant="-2" id="qzD-Zf-9hS"/>
+                            <constraint firstItem="Hya-8F-a5F" firstAttribute="top" secondItem="vGW-m7-Gvi" secondAttribute="bottom" constant="33" id="vWS-dc-ZtM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuF-5a-Px7" userLabel="First Responder" sceneMemberID="firstResponder"/>
