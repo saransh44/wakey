@@ -30,7 +30,7 @@ class SleepAlarm:UIViewController {
             
             nil))
        
-       self.performSegueWithIdentifier("BadToGood", sender: self)
+       self.performSegueWithIdentifier("B2G", sender: self)
         
         
         }

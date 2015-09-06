@@ -43,6 +43,7 @@ class Hours : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         for i = 0; i < pickerData.count; i++ {
             pickerData[i] = i + 1;
     
+    
         }
         
         var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
@@ -50,10 +51,15 @@ class Hours : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         label.textAlignment = NSTextAlignment.Center
         //label.text = chosen picker one
         self.view.addSubview(label)
-        
+      
+       
         
     }
     
+    @IBAction func Hours2Start(sender: AnyObject) {
+        self.performSegueWithIdentifier("H2S", sender: self)
+        
+    }
     
       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

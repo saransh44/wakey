@@ -36,7 +36,12 @@ class WelcomeScreen: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.performSegueWithIdentifier("hello", sender: self)
+        
+    }
+    
+    
+    @IBAction func Begin(sender: AnyObject) {
+        self.performSegueWithIdentifier("W2T", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

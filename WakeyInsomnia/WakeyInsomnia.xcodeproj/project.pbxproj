@@ -15,6 +15,8 @@
 		304F07AF1B9BD888009F23E8 /* WakeyInsomniaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F07AE1B9BD888009F23E8 /* WakeyInsomniaTests.swift */; };
 		304F07BB1B9BF14B009F23E8 /* Hours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F07BA1B9BF14B009F23E8 /* Hours.swift */; };
 		304F07BD1B9C3208009F23E8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 304F07BC1B9C3208009F23E8 /* Sounds */; };
+		304F07BF1B9C66E6009F23E8 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F07BE1B9C66E6009F23E8 /* Good.swift */; };
+		304F07C11B9C6DCD009F23E8 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 304F07C01B9C6DCD009F23E8 /* Images */; };
 		8AB9D1551B9BFC1900D918FC /* SleepAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9D1541B9BFC1900D918FC /* SleepAlarm.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		304F07AE1B9BD888009F23E8 /* WakeyInsomniaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeyInsomniaTests.swift; sourceTree = "<group>"; };
 		304F07BA1B9BF14B009F23E8 /* Hours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hours.swift; sourceTree = "<group>"; };
 		304F07BC1B9C3208009F23E8 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		304F07BE1B9C66E6009F23E8 /* Good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
+		304F07C01B9C6DCD009F23E8 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		8AB9D1541B9BFC1900D918FC /* SleepAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAlarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +91,10 @@
 				304F07981B9BD888009F23E8 /* AppDelegate.swift */,
 				304F079A1B9BD888009F23E8 /* WelcomeScreen.swift */,
 				8AB9D1541B9BFC1900D918FC /* SleepAlarm.swift */,
+				304F07BE1B9C66E6009F23E8 /* Good.swift */,
 				304F07BA1B9BF14B009F23E8 /* Hours.swift */,
 				304F079C1B9BD888009F23E8 /* Main.storyboard */,
+				304F07C01B9C6DCD009F23E8 /* Images */,
 				304F079F1B9BD888009F23E8 /* Images.xcassets */,
 				304F07A11B9BD888009F23E8 /* LaunchScreen.xib */,
 				304F07961B9BD888009F23E8 /* Supporting Files */,
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304F07C11B9C6DCD009F23E8 /* Images in Resources */,
 				304F079E1B9BD888009F23E8 /* Main.storyboard in Resources */,
 				304F07A31B9BD888009F23E8 /* LaunchScreen.xib in Resources */,
 				304F07BD1B9C3208009F23E8 /* Sounds in Resources */,
@@ -224,6 +231,7 @@
 			files = (
 				304F079B1B9BD888009F23E8 /* WelcomeScreen.swift in Sources */,
 				8AB9D1551B9BFC1900D918FC /* SleepAlarm.swift in Sources */,
+				304F07BF1B9C66E6009F23E8 /* Good.swift in Sources */,
 				304F07BB1B9BF14B009F23E8 /* Hours.swift in Sources */,
 				304F07991B9BD888009F23E8 /* AppDelegate.swift in Sources */,
 			);

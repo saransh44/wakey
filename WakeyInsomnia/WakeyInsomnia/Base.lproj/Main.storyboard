@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VXp-ob-U7P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -31,41 +31,25 @@ Wakey</string>
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Begin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2m-xg-jOd"/>
+                                    <segue destination="62Q-WM-VSj" kind="show" identifier="W2T" id="TvQ-hf-IKX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="9ao-qQ-7Wv" secondAttribute="centerX" id="H2h-fV-Z4d"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9ao-qQ-7Wv" secondAttribute="bottom" constant="142" id="HTh-qg-P1I"/>
+                            <constraint firstItem="ugj-Uu-kf5" firstAttribute="baseline" secondItem="9ao-qQ-7Wv" secondAttribute="baseline" constant="-319" id="hi3-hW-93l"/>
                             <constraint firstAttribute="centerX" secondItem="ugj-Uu-kf5" secondAttribute="centerX" constant="-0.5" id="qg1-nQ-5XS"/>
                             <constraint firstItem="ugj-Uu-kf5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="uy3-Wi-fc6"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="62Q-WM-VSj" kind="show" identifier="hello" id="myP-HO-xxs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="396" y="318"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="oCC-g3-FIf">
-            <objects>
-                <viewController id="LLd-wK-8xl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SsX-ie-3xt"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q6w-mm-yKo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="y5B-fu-KXS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxz-76-Sdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1106" y="318"/>
         </scene>
         <!--Hours-->
         <scene sceneID="mqJ-Lr-MiT">
@@ -91,6 +75,10 @@ Wakey</string>
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Hours2Start:" destination="62Q-WM-VSj" eventType="touchUpInside" id="8wu-Rl-6rq"/>
+                                    <segue destination="GEp-na-XLM" kind="show" identifier="H2S" id="9Kz-Gj-Bj8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hour(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-ct-kHp">
                                 <rect key="frame" x="323" y="368" width="55" height="21"/>
@@ -130,30 +118,12 @@ Wakey</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuF-5a-Px7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="318"/>
+            <point key="canvasLocation" x="1252" y="310"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="HGf-Gd-ICW">
-            <objects>
-                <viewController id="BNC-Za-sC8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="riV-tr-SnQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="xor-Hl-MYm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="daV-wN-vS1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bX0-rB-m5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2518" y="318"/>
-        </scene>
-        <!--View Controller-->
+        <!--Good-->
         <scene sceneID="HUs-TQ-Wco">
             <objects>
-                <viewController id="GEp-na-XLM" colorLabel="IBBuiltInLabel-Green" sceneMemberID="viewController">
+                <viewController id="GEp-na-XLM" customClass="Good" customModule="WakeyInsomnia" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQW-65-fig"/>
                         <viewControllerLayoutGuide type="bottom" id="dxm-yZ-Wpo"/>
@@ -161,20 +131,15 @@ Wakey</string>
                     <view key="view" contentMode="scaleToFill" id="daM-2c-AqF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hellooooo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP5-oj-Ov8">
-                                <rect key="frame" x="279" y="74" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="VXp-ob-U7P" kind="show" identifier="G2B" id="TYx-bP-1La"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DO9-Sc-X4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="318"/>
+            <point key="canvasLocation" x="2002" y="318"/>
         </scene>
         <!--Sleep Alarm-->
         <scene sceneID="hJL-vw-YHk">
@@ -190,12 +155,15 @@ Wakey</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="GEp-na-XLM" kind="show" identifier="BadToGood" id="PJO-2g-MsE"/>
+                        <segue destination="GEp-na-XLM" kind="show" identifier="B2G" id="PJO-2g-MsE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhf-mv-hjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3204" y="1050"/>
+            <point key="canvasLocation" x="2002" y="1129"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Kz-Gj-Bj8"/>
+    </inferredMetricsTieBreakers>
 </document>
