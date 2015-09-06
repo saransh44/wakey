@@ -33,24 +33,14 @@ class Good: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         
-        check(0)
+        
         
     }
     
-    func check(m: Int){
-        var f = false
-        
-        print("hello")
-        
-        if(m == 1){
-            f = true
-        }
-        
-        if(m == 0){
-            self.performSegueWithIdentifier("G2B", sender: self)
-
-        }
+    @IBAction func ToBad(sender: AnyObject) {
+        self.performSegueWithIdentifier("G2B", sender: self)
     }
+    
 
     
     override func didReceiveMemoryWarning() {

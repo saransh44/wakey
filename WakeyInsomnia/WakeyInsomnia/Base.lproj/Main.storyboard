@@ -85,7 +85,7 @@ Wakey</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoR-OW-3JJ">
                                 <rect key="frame" x="225" y="368" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-QL-bqo">
@@ -98,7 +98,7 @@ Wakey</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hour(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-ct-kHp">
                                 <rect key="frame" x="273" y="362" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -138,7 +138,23 @@ Wakey</string>
                     <view key="view" contentMode="scaleToFill" id="daM-2c-AqF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHL-ep-ko4">
+                                <rect key="frame" x="270" y="537" width="60" height="30"/>
+                                <state key="normal" title="To Alarm">
+                                    <color key="titleColor" red="1" green="0.083229066430389853" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ToBad:" destination="GEp-na-XLM" eventType="touchUpInside" id="9JS-zb-TY1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="KHL-ep-ko4" secondAttribute="centerX" id="e15-ox-JF4"/>
+                            <constraint firstItem="dxm-yZ-Wpo" firstAttribute="top" secondItem="KHL-ep-ko4" secondAttribute="bottom" constant="33" id="oXD-zU-lbR"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="VXp-ob-U7P" kind="show" identifier="G2B" id="TYx-bP-1La"/>
@@ -159,18 +175,34 @@ Wakey</string>
                     <view key="view" contentMode="scaleToFill" id="fwk-Rt-UuA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-SU-4E3">
+                                <rect key="frame" x="266" y="509" width="50" height="30"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ToStart:" destination="VXp-ob-U7P" eventType="touchUpInside" id="CAc-iV-UXa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="obh-wv-zie" firstAttribute="top" secondItem="Teb-SU-4E3" secondAttribute="bottom" constant="61" id="HGA-Sg-YzJ"/>
+                            <constraint firstAttribute="centerX" secondItem="Teb-SU-4E3" secondAttribute="centerX" constant="9" id="UDM-wS-8gw"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="GEp-na-XLM" kind="show" identifier="B2G" id="PJO-2g-MsE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Restart" id="Dz7-a7-nH2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhf-mv-hjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="1129"/>
+            <point key="canvasLocation" x="396" y="1051"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Kz-Gj-Bj8"/>
+        <segue reference="PJO-2g-MsE"/>
     </inferredMetricsTieBreakers>
 </document>

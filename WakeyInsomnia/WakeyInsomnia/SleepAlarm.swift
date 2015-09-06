@@ -30,12 +30,17 @@ class SleepAlarm:UIViewController {
             
             nil))
        
-       self.performSegueWithIdentifier("B2G", sender: self)
+       
         
         
         }
     
     
+    @IBAction func ToStart(sender: AnyObject) {
+        self.performSegueWithIdentifier("Restart", sender: self)
+        AudioPlay.stop()
+        
+    }
     
     
      func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
