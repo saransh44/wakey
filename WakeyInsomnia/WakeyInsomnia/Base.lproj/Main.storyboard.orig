@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VXp-ob-U7P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VXp-ob-U7P">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -76,33 +76,46 @@ Wakey</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How many hours are   you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
-                                <rect key="frame" x="138" y="53" width="324" height="24"/>
-                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="30"/>
 <<<<<<< HEAD
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How many hours are   you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
+                                <rect key="frame" x="138" y="53" width="324" height="24"/>
 =======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many hours are    you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
+                                <rect key="frame" x="0.0" y="53" width="600" height="71.5"/>
+>>>>>>> ce78ef84d9137f4f862b211048a9a8089321b7c1
+                                <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
->>>>>>> 8160f8a12ab230f106f006e768bf96059f29106d
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-QL-bqo">
-                                <rect key="frame" x="142" y="303" width="320" height="162"/>
+                                <rect key="frame" x="142" y="150" width="320" height="162"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="62Q-WM-VSj" id="ThE-Tu-NIy"/>
+                                    <outlet property="dataSource" destination="62Q-WM-VSj" id="knX-aY-wqV"/>
+                                    <outlet property="delegate" destination="62Q-WM-VSj" id="wbW-JG-vj0"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luQ-PC-3sr">
+                                <rect key="frame" x="285" y="502" width="30" height="30"/>
+                                <state key="normal" title="Yes!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="o9M-QL-bqo" secondAttribute="bottom" constant="135" id="hDe-oa-YUN"/>
+                            <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="o9M-QL-bqo" secondAttribute="bottom" constant="288" id="WVg-DQ-AFS"/>
+                            <constraint firstItem="o9M-QL-bqo" firstAttribute="top" secondItem="vGW-m7-Gvi" secondAttribute="bottom" constant="130" id="aEY-Ni-6PS"/>
+                            <constraint firstAttribute="centerX" secondItem="luQ-PC-3sr" secondAttribute="centerX" constant="-2" id="iiW-j9-iER"/>
                             <constraint firstAttribute="centerX" secondItem="Hya-8F-a5F" secondAttribute="centerX" id="kcm-C9-ZJX"/>
+                            <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="luQ-PC-3sr" secondAttribute="bottom" constant="67" id="m2i-wI-Y1X"/>
                             <constraint firstAttribute="centerX" secondItem="o9M-QL-bqo" secondAttribute="centerX" constant="-2" id="qzD-Zf-9hS"/>
                             <constraint firstItem="Hya-8F-a5F" firstAttribute="top" secondItem="vGW-m7-Gvi" secondAttribute="bottom" constant="33" id="vWS-dc-ZtM"/>
+                            <constraint firstAttribute="width" secondItem="Hya-8F-a5F" secondAttribute="width" id="yQ1-kh-Tww"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="Choices" destination="o9M-QL-bqo" collectionClass="NSMutableArray" id="09h-B1-EAi"/>
+                        <outletCollection property="choice" destination="o9M-QL-bqo" collectionClass="NSMutableArray" id="c8z-BE-5Jv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuF-5a-Px7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,10 +158,10 @@ Wakey</string>
             </objects>
             <point key="canvasLocation" x="3204" y="318"/>
         </scene>
-        <!--View Controller-->
+        <!--Sleep Alarm-->
         <scene sceneID="hJL-vw-YHk">
             <objects>
-                <viewController id="VXp-ob-U7P" sceneMemberID="viewController">
+                <viewController id="VXp-ob-U7P" customClass="SleepAlarm" customModule="WakeyInsomnia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="itt-De-4r8"/>
                         <viewControllerLayoutGuide type="bottom" id="obh-wv-zie"/>
