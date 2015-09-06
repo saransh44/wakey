@@ -79,11 +79,14 @@ Wakey</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How many hours are   you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
                                 <rect key="frame" x="138" y="53" width="324" height="24"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-QL-bqo">
                                 <rect key="frame" x="142" y="303" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="62Q-WM-VSj" id="ThE-Tu-NIy"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,6 +97,9 @@ Wakey</string>
                             <constraint firstItem="Hya-8F-a5F" firstAttribute="top" secondItem="vGW-m7-Gvi" secondAttribute="bottom" constant="33" id="vWS-dc-ZtM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="Choices" destination="o9M-QL-bqo" collectionClass="NSMutableArray" id="09h-B1-EAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuF-5a-Px7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

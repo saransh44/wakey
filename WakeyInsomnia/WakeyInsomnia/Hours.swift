@@ -10,6 +10,9 @@ import UIKit
 
 class Hours: UIViewController {
     let gradientLayer = CAGradientLayer()
+    var pickerData: [Int] = [6]
+    @IBOutlet var choice: [UIPickerView]!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +38,16 @@ class Hours: UIViewController {
         //view.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         self.view.layer.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         // Do any additional setup after loading the view, typically from a nib.
-    }
+
+        for (var i = 0; i < 15; i++ ){
+            pickerData[i] = i + 1;
+        }
     
-    override func didReceiveMemoryWarning() {
+     func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+   }
 }
 
