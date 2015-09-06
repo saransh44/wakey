@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>30E1A2CB-AB9A-4237-8C12-1498097F818B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>WakeyInsomnia</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B3EB75C03520024F662ABF2BC695304D10832A90</key>
 		<string>https://github.com/shannonpeng/wakey.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>WakeyInsomnia/WakeyInsomnia.xcodeproj/project.xcworkspace</string>
+	<string>WakeyInsomnia/WakeyInsomnia.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B3EB75C03520024F662ABF2BC695304D10832A90</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>B3EB75C03520024F662ABF2BC695304D10832A90</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Wakey</string>
+			<string>wakey</string>
 		</dict>
 	</array>
 </dict>
