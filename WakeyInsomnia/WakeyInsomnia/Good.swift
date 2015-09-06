@@ -17,12 +17,18 @@ class Good: UIViewController {
         // 1
         
         
-        self.view.backgroundColor = UIColor.greenColor() //can be set as an image (the angry face)
+        self.view.backgroundColor =  UIColor(patternImage: UIImage(named: "logo.png")!)
+        
+        self.view.backgroundColor = UIColor.greenColor()
+        //self.view.layer.addSublayer(gradientLayer)
+        //view.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
+       //can be set as an image (the angry face)
+       
         // 2
         
         
         // 5
-        //self.view.layer.addSublayer(gradientLayer)
+       // self.view.layer.addSublayer(gradientLayer)
         //view.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         
         // Do any additional setup after loading the view, typically from a nib.

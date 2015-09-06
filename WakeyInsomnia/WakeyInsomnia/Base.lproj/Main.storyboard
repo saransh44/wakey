@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Welcome Screen-->
@@ -63,7 +65,7 @@ Wakey</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How many hours are    you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many hours are you working for?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hya-8F-a5F">
                                 <rect key="frame" x="0.0" y="53" width="600" height="71.5"/>
                                 <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,12 +82,6 @@ Wakey</string>
                                     <segue destination="GEp-na-XLM" kind="show" identifier="H2S" id="9Kz-Gj-Bj8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hour(s)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-ct-kHp">
-                                <rect key="frame" x="323" y="368" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoR-OW-3JJ">
                                 <rect key="frame" x="225" y="368" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -99,15 +95,26 @@ Wakey</string>
                                     <outlet property="delegate" destination="62Q-WM-VSj" id="wbW-JG-vj0"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hour(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-ct-kHp">
+                                <rect key="frame" x="273" y="362" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ri0-ct-kHp" firstAttribute="leading" secondItem="dRS-8q-oU1" secondAttribute="leadingMargin" constant="296" id="2Aa-nQ-Uhz"/>
+                            <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="ri0-ct-kHp" secondAttribute="bottom" constant="222" id="3C0-gc-QZn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ri0-ct-kHp" secondAttribute="trailing" constant="217" id="Ri5-Df-foR"/>
                             <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="o9M-QL-bqo" secondAttribute="bottom" constant="288" id="WVg-DQ-AFS"/>
                             <constraint firstItem="o9M-QL-bqo" firstAttribute="top" secondItem="vGW-m7-Gvi" secondAttribute="bottom" constant="130" id="aEY-Ni-6PS"/>
                             <constraint firstAttribute="centerX" secondItem="luQ-PC-3sr" secondAttribute="centerX" constant="-2" id="iiW-j9-iER"/>
+                            <constraint firstItem="ri0-ct-kHp" firstAttribute="top" secondItem="o9M-QL-bqo" secondAttribute="bottom" constant="45" id="jYg-ud-2iV"/>
                             <constraint firstAttribute="centerX" secondItem="Hya-8F-a5F" secondAttribute="centerX" id="kcm-C9-ZJX"/>
                             <constraint firstItem="1tc-6v-H0b" firstAttribute="top" secondItem="luQ-PC-3sr" secondAttribute="bottom" constant="67" id="m2i-wI-Y1X"/>
                             <constraint firstAttribute="centerX" secondItem="o9M-QL-bqo" secondAttribute="centerX" constant="-2" id="qzD-Zf-9hS"/>
+                            <constraint firstAttribute="width" secondItem="ri0-ct-kHp" secondAttribute="height" multiplier="200:7" id="sB6-Vx-ATb"/>
                             <constraint firstItem="Hya-8F-a5F" firstAttribute="top" secondItem="vGW-m7-Gvi" secondAttribute="bottom" constant="33" id="vWS-dc-ZtM"/>
                             <constraint firstAttribute="width" secondItem="Hya-8F-a5F" secondAttribute="width" id="yQ1-kh-Tww"/>
                         </constraints>
@@ -118,7 +125,7 @@ Wakey</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuF-5a-Px7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="310"/>
+            <point key="canvasLocation" x="1282" y="340"/>
         </scene>
         <!--Good-->
         <scene sceneID="HUs-TQ-Wco">
