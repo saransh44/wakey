@@ -31,10 +31,22 @@ public class MyoActivity extends Activity {
     private TextView axis;
     private TextView mLockStateView;
     private TextView mTextView;
+    private TextView X;
+    private TextView Y;
+    private TextView Z;
+
+    float roll;
+    float pitch;
+    float yaw;
+    float roll2 = 0;
+    float pitch2 = 0;
+    float yaw2 = 0;
+
+    String sleep?
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
 
-    /*private DeviceListener mListener = new AbstractDeviceListener() {
+    private DeviceListener mListener = new AbstractDeviceListener() {
         // onConnect() is called whenever a Myo has been connected.
         @Override
         public void onConnect(Myo myo, long timestamp) {
@@ -77,18 +89,41 @@ public class MyoActivity extends Activity {
         @Override
         public void onOrientationData(Myo myo, long timestamp, Quaternion rotation) {
             // Calculate Euler angles (roll, pitch, and yaw) from the quaternion.
-            float roll = (float) Math.toDegrees(Quaternion.roll(rotation));
-            float pitch = (float) Math.toDegrees(Quaternion.pitch(rotation));
-            float yaw = (float) Math.toDegrees(Quaternion.yaw(rotation));
+            roll = (float) Math.toDegrees(Quaternion.roll(rotation));
+            pitch = (float) Math.toDegrees(Quaternion.pitch(rotation));
+            yaw = (float) Math.toDegrees(Quaternion.yaw(rotation));
             // Adjust roll and pitch for the orientation of the Myo on the arm.
             if (myo.getXDirection() == XDirection.TOWARD_ELBOW) {
                 roll *= -1;
                 pitch *= -1;
+                //yaw = ((yaw*-1) + 25);
+                //yaw = yaw * -1;
             }
-            // Next, we apply a rotation to the text view using the roll, pitch, and yaw.
+
             mTextView.setRotation(roll);
             mTextView.setRotationX(pitch);
             mTextView.setRotationY(yaw);
+
+            // Next, we apply a rotation to the text view using the roll, pitch, and yaw.
+            if ((Math.abs(roll) - Math.abs(roll2)) > 1 || (Math.abs(pitch) - Math.abs(pitch2)) > 1 || ((Math.abs(yaw) - Math.abs(yaw2))  > 1))
+            {
+                /*X.setText(Float.toString(Math.abs(roll) - Math.abs(roll2)));
+                Y.setText(Float.toString(Math.abs(pitch) - Math.abs(pitch2)));
+                Z.setText(Float.toString(Math.abs(yaw) - Math.abs(yaw2)));*/
+
+                X.setText(Float.toString(Math.abs(roll)));
+                Y.setText(Float.toString(Math.abs(pitch)));
+                Z.setText(Float.toString(Math.abs(yaw)));
+            }
+
+
+            roll2 = (float) Math.toDegrees(Quaternion.roll(rotation));
+            pitch2 = (float) Math.toDegrees(Quaternion.pitch(rotation));
+            yaw2 = (float) Math.toDegrees(Quaternion.yaw(rotation));
+            //yaw2 = ((yaw2*-1) + 25);
+            //yaw2 *= -1;
+            pitch2 *= -1;
+            roll2 *= -1;
         }
         // onPose() is called whenever a Myo provides a new pose.
         @Override
@@ -138,7 +173,7 @@ public class MyoActivity extends Activity {
                 myo.unlock(Myo.UnlockType.TIMED);
             }
         }
-    };*/
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,9 +185,13 @@ public class MyoActivity extends Activity {
             finish();
             return;
         }
-        //hub.addListener(mListener);
+        hub.addListener(mListener);
         scan = (Button) findViewById(R.id.scanButton);
+        mTextView = (TextView) findViewById(R.id.ball);
 
+        X = (TextView) findViewById(R.id.x);
+        Y = (TextView) findViewById(R.id.y);
+        Z = (TextView) findViewById(R.id.z);
         //Myo myo = null;
         //String d = myo.getXDirection().toString();
         axis = (TextView) findViewById(R.id.AxisValue);
