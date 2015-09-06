@@ -35,6 +35,8 @@ class WelcomeScreen: UIViewController {
         //view.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         self.view.layer.insertSublayer(gradientLayer, below: self.view.subviews[0].layer)
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.performSegueWithIdentifier("hello", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

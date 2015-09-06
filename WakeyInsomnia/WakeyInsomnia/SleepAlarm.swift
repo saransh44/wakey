@@ -1,3 +1,4 @@
+
 //
 //  SleepAlarm.swift
 //  WakeyInsomnia
@@ -17,6 +18,8 @@ class SleepAlarm:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.redColor() //can be set as an image (the angry face)
+        
         AudioPlay = self.setupAudioPlayerWithFile("Sounds/Tornado", type:"mp3")
         
        AudioPlay.play()
@@ -26,8 +29,14 @@ class SleepAlarm:UIViewController {
         AlertView.addAction(UIAlertAction(title: "Go", style: UIAlertActionStyle.Default, handler:
             
             nil))
+       
+       self.performSegueWithIdentifier("BadToGood", sender: self)
+        
         
         }
+    
+    
+    
     
      func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
             
@@ -43,6 +52,9 @@ class SleepAlarm:UIViewController {
             audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
             
             return audioPlayer!
+        
+        
+        
             
         }
     
