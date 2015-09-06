@@ -44,7 +44,17 @@ class Hours : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             pickerData[i] = i + 1;
     
         }
+        
+        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        //label.text = chosen picker one
+        self.view.addSubview(label)
+        
+        
     }
+    
+    
       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
