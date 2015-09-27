@@ -40,7 +40,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
         android:id="@+id/AxisValue"
         android:layout_below="@+id/Hello"
         android:layout_toEndOf="@+id/PlaintextAxis" />
@@ -104,5 +103,15 @@
         android:id="@+id/ball"
         android:layout_above="@+id/textView"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/debug"
+        android:layout_below="@+id/AxisValue"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="55dp" />
 
 </RelativeLayout>

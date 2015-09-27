@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.firebase.client.Firebase;
 import com.thalmic.myo.AbstractDeviceListener;
 import com.thalmic.myo.DeviceListener;
 import com.thalmic.myo.Hub;
@@ -20,8 +21,6 @@ import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
 import com.thalmic.myo.Arm;
 import com.thalmic.myo.Quaternion;
-
-
 
 public class MyoActivity extends Activity {
 
@@ -34,18 +33,24 @@ public class MyoActivity extends Activity {
     private TextView X;
     private TextView Y;
     private TextView Z;
-
+    private TextView time;
     float roll;
     float pitch;
     float yaw;
     float roll2 = 0;
     float pitch2 = 0;
     float yaw2 = 0;
-
-    String sleep?
+    int steps;
+    //String sleeps?
     // Classes that inherit from AbstractDeviceListener can be used to receive events from Myo devices.
     // If you do not override an event, the default behavior is to do nothing.
 
+    double speedOfX;
+    double speedOfY;
+    double speedOfZ;
+    Boolean awake = true;
+    int timeCounter = 0;
+    //double
     private DeviceListener mListener = new AbstractDeviceListener() {
         // onConnect() is called whenever a Myo has been connected.
         @Override
@@ -104,6 +109,7 @@ public class MyoActivity extends Activity {
             mTextView.setRotationX(pitch);
             mTextView.setRotationY(yaw);
 
+
             // Next, we apply a rotation to the text view using the roll, pitch, and yaw.
             if ((Math.abs(roll) - Math.abs(roll2)) > 1 || (Math.abs(pitch) - Math.abs(pitch2)) > 1 || ((Math.abs(yaw) - Math.abs(yaw2))  > 1))
             {
@@ -114,8 +120,19 @@ public class MyoActivity extends Activity {
                 X.setText(Float.toString(Math.abs(roll)));
                 Y.setText(Float.toString(Math.abs(pitch)));
                 Z.setText(Float.toString(Math.abs(yaw)));
+
+                awake = true;
+                timeCounter = 0;
+            }
+            else
+            {
+                timeCounter +=1;
+                if(timeCounter > 500){
+                    awake = false;
+                }
             }
 
+            time.setText(Integer.toString(timeCounter));
 
             roll2 = (float) Math.toDegrees(Quaternion.roll(rotation));
             pitch2 = (float) Math.toDegrees(Quaternion.pitch(rotation));
@@ -185,9 +202,15 @@ public class MyoActivity extends Activity {
             finish();
             return;
         }
+
         hub.addListener(mListener);
+        Firebase.setAndroidContext(this);
+        Firebase myFirebaseRef = new Firebase("https://burning-inferno-2014.firebaseio.com/");
         scan = (Button) findViewById(R.id.scanButton);
         mTextView = (TextView) findViewById(R.id.ball);
+        if(awake == false) {
+            myFirebaseRef.child("message").setValue("False");
+        }
 
         X = (TextView) findViewById(R.id.x);
         Y = (TextView) findViewById(R.id.y);
@@ -196,6 +219,7 @@ public class MyoActivity extends Activity {
         //String d = myo.getXDirection().toString();
         axis = (TextView) findViewById(R.id.AxisValue);
 
+        time = (TextView) findViewById(R.id.debug);
         //axis.setText(d);
 
         scan.setOnClickListener(new View.OnClickListener(){
@@ -217,6 +241,8 @@ public class MyoActivity extends Activity {
         this.startActivity(intent);
     }
 
+    public void messages(){
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
